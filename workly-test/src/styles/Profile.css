@@ -1,0 +1,154 @@
+.profile-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-card {
+  background: linear-gradient(to right, #0077cc, #00c2cb);
+  color: white;
+  padding: 32px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.profile-avatar {
+  background: #fff;
+  color: #0077cc;
+  width: 80px;
+  height: 80px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-details h1 {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.profile-email {
+  font-size: 0.95rem;
+  color: #e6f2f3;
+}
+
+.profile-bio {
+  margin-top: 6px;
+  font-style: italic;
+  font-size: 1rem;
+  color: #f4f4f4;
+}
+
+.posts-section {
+  margin-top: 40px;
+  animation: slideUp 0.6s ease-in-out;
+}
+
+.posts-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.post-card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+}
+
+.post-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.post-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.post-time {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.loading-screen {
+  display: flex;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #0077cc;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 600px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .profile-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .profile-details h1 {
+    font-size: 1.5rem;
+  }
+
+  .post-image {
+    max-height: 200px;
+  }
+}
